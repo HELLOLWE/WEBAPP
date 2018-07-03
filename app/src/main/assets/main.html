@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配件包装方案搜索</title>
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/MUI/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/MUI/icons-extra.css"/>
+    <link rel="stylesheet" type="text/css" href="css/global/global.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/orderSearch.css"/>
+    <style>
+        .mui-btn {
+            padding: 10px;
+            diaplay:black;
+        }
+    </style>
+</head>
+<body>
+<!--顶部菜单栏-->
+<header class="mui-bar mui-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left mui-active-back"></a>
+    <h1 class="mui-title">配件包装方案搜索</h1>
+</header>
+<!--主体内容-->
+<div class="mui-row search-row">
+    <div class="mui-input-row mui-search">
+        <input id="txtSeach" type="search" class="mui-input-clear" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="根据配件号查询"
+               title="根据配件号查询"/>
+    </div>
+</div>
+<div class="mui-content">
+    <div class="mui-content-padded">
+        <button type="button" class="mui-btn mui-btn-blue mui-btn-block " data-loading-text="正在搜索" id="toSearch"
+                style="margin-top: 100px;font-size: 14px">搜索
+        </button>
+    </div>
+</div>
+<script type="application/javascript" src="js/MUI/hello-mui/mui.min.js"></script>
+<script type="application/javascript" src="js/config/AppConfig.js"></script>
+<script type="application/javascript" src="js/jquery/jquery-3.1.1.js"></script>
+<script type="application/javascript" src="js/jquery/jquery.cookie.js"></script>
+<script type="application/javascript" src="js/global/vlidation.js"></script>
+<script type="application/javascript" src="js/jquery/ajax.js"></script>
+<script type="application/javascript" src="js/global/global.js"></script>
+<script type="application/javascript" src="js/global/orderSearch.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+.search-row {
+    position: fixed;
+    padding: 15px 15px 0;
+    top: 44px;
+    width: 100%;
+    z-index: 99999;
+    background-color: #efeff4;
+}
+
+.search-row input[type=search] {
+    background-color: #ffffff;
+    height: 40px;
+}
+
+.search-row .mui-placeholder {
+    height: 40px;
+    line-height: 40px;
+}
+
+.search-row .mui-search.mui-active:before,
+.search-row .mui-placeholder .mui-icon {
+    font-weight: bold;
+}
+
+.search-row .mui-placeholder .mui-icon {
+    color: #999999;
+}
+
+.search-row .mui-icon-clear {
+    height: 40px;
+    line-height: 25px;
+}
+
+.mui-pull-bottom-tips {
+    text-align: center;
+    background-color: #efeff4;
+    font-size: 15px;
+    line-height: 40px;
+    color: #777;
+}
+
+.mui-bar-nav ~ .mui-content {
+    padding-top: 114px;
+}
+
+.mui-bar-nav ~ .mui-content .mui-scroll-wrapper {
+    margin-top: 114px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+ul.order-list {
+    background-color: transparent;
+    font-size: 12px;
+}
+
+ul.order-list li.order-item {
+    margin-top: 10px;
+    padding: 0 15px;
+    background-color: #ffffff;
+}
+
+ul.order-list li.order-item:first-child {
+    margin-top: 0;
+}
+
+ul.order-list li.order-item.mui-table-view-cell:after {
+    height: 0;
+    background-color: transparent;
+}
+
+ul.order-list li.order-item .order-item-title {
+    height: 40px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+ul.order-list li.order-item .orderStatus {
+    text-align: right;
+    color: #007AFF;
+}
+
+ul.order-list li.order-item > a.goods-list {
+    background-color: #f4f4f4;
+    margin: 0 -15px;
+    padding: 0 15px;
+}
+
+ul.order-list li.order-item > a.goods-list div.goods-item {
+    margin: 6px 0;
+    overflow: hidden;
+}
+
+ul.order-list li.order-item > a.goods-list img.goods-img {
+    max-width: 70px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+}
+
+ul.order-list .goods-info {
+    white-space: normal;
+}
+
+ul.order-list .goods-info h3.goods-title,
+ul.order-list .goods-info p.goods-sku {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    margin: 0;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp: 2;
+    -ms-line-clamp: 2;
+    -o-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+    display: -webkit-box;
+    display: -moz-box;
+    word-break: break-all;
+}
+
+ul.order-list .goods-info p.goods-sku {
+    margin-top: 5px;
+}
+
+ul.order-list .goods-pay p {
+    text-align: right;
+}
+
+ul.order-list .goods-pay p.price {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+ul.order-list .o-total-price {
+    padding: 10px 0;
+    margin: 0 -15px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+ul.order-list .o-total-price .cont {
+    font-size: 14px;
+    margin: 0 15px;
+    float: right;
+}
+
+ul.order-list .o-total-price .cont span {
+    margin-left: 15px;
+}
+
+ul.order-list .o-total-price .cont span:first-child {
+    margin-left: 0;
+}
+
+ul.order-list .orderop {
+    padding: 10px 0;
+}
+
+ul.order-list .orderop .o-tab-btn {
+    float: right;
+}
+
+ul.order-list .orderop .o-tab-btn .mui-btn {
+    margin-left: 15px;
+}
+
+ul.order-list .orderop .o-tab-btn .mui-btn:first-child {
+    margin-left: 0;
+}

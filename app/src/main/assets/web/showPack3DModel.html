@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配件包装方案展示</title>
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/MUI/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/global/global.css">
+    <link rel="stylesheet" type="text/css" href="../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/MUI/icons-extra.css">
+</head>
+<body>
+<style>
+    .mui-control-content {
+        background-color: white;
+        min-height: 485px;
+    }
+
+    .mui-control-content .mui-loading {
+        margin-top: 50px;
+    }
+
+    .mui-table-view-cell > a:not(.mui-btn) {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0px -15px;
+        padding: inherit;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: inherit;
+    }
+
+</style>
+<header class="mui-bar mui-bar-nav mui-bar-transparent">
+    <a class="mui-icon mui-icon-left-nav mui-pull-left mui-action-back"></a>
+    <h1 class="mui-title">配件包装方案展示</h1>
+    <a id="menu" class="mui-icon mui-icon-refresh mui-pull-right" style=".mui-icon-bars:before {
+    content: '\e563';
+};color: white" href="javascript:window.location.reload()"></a>
+</header>
+
+<div class="mui-content">
+    <div id="slider" class="mui-slider">
+        <div id="sliderSegmentedControl"
+             class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+            <a class="mui-control-item" href="#item1mobile">
+                3D模型
+            </a>
+            <a class="mui-control-item" href="#item2mobile">
+                包装方案PDF
+            </a>
+            <a class="mui-control-item" href="#item3mobile">
+                方案设计图
+            </a>
+        </div>
+        <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+        <div class="mui-slider-group">
+            <div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+                <div id="scroll1" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-loading">
+                            <div class="mui-spinner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item2mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll2" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-loading">
+                            <div class="mui-spinner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="item3mobile" class="mui-slider-item mui-control-content">
+                <div id="scroll3" class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <div class="mui-loading">
+                            <div class="mui-spinner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/MUI/mui.min.js"></script>
+<script src="../js/global/pdfobject.js"></script>
+<script src="../js/jquery/jquery-3.1.1.js"></script>
+<script src="../js/jquery/jquery.cookie.js"></script>
+<script src="../js/config/AppConfig.js"></script>
+<script src="../js/jquery/ajax.js"></script>
+
+<script type="text/javascript" src="../js/layerMobile/layer.js"></script>
+<script>
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    //左右滑动界面实现方法
+    (function ($) {
+        $('.mui-scroll-wrapper').scroll({
+            indicators: true //是否显示滚动条
+        });
+
+        //获取帮助台详细列表数据
+
+        var item1 = document.getElementById('item1mobile');
+        var item2 = document.getElementById('item2mobile');
+        var item3 = document.getElementById('item3mobile');
+        var html1='';
+        var html2='';
+        var html3='';
+        document.getElementById("scroll1").innerHTML = '<object type="text/html" data="http://210.73.195.77/html/sgm/wrlView/index.html" width="100%" height="100%"></object>';
+      //  document.getElementById("scroll2").innerHTML = '<embed width="100%" height="100%" src="../img/src/3d.pdf"> </embed> ';
+
+        html3 = '<ul class="mui-table-view">' +
+        '<div class="mui-content-padded"><p><img src="../img/designImg.jpg" data-preview-src="" data-preview-group="1" /></p></div></ul>';
+        item3.querySelector('.mui-scroll').innerHTML = html3;
+
+
+        //PDF显示设置
+        document.getElementById("scroll2").innerHTML = '<object type="text/html" data="viewer.html" width="100%" height="100%"></object>';
+
+
+
+        document.getElementById('slider').addEventListener('slide', function (e) {
+            console.info("导航栏状态：" + e.detail.slideNumber);
+            if (e.detail.slideNumber === 0) {
+                if (item1.querySelector('.mui-loading')) {
+                    setTimeout(function () {
+                        item1.querySelector('.mui-scroll').innerHTML = html1;
+                    }, 500);
+                }
+            } else if (e.detail.slideNumber === 1) {
+                if (item2.querySelector('.mui-loading')) {
+                    if (navigator.userAgent.indexOf('Android') > -1) {
+                        //判断移动端是android 还是ios ，若是android 则要借助pdf插件
+                        window.location.href = "http://192.168.1.110:8060/js/web/viewer.html?file="+url;
+                    } else {
+                        //ios直接打开pdf
+                        //window.location.href = url;
+                        window.location.href = "http://192.168.1.110:8060/js/web/viewer.html?file="+url;
+                    }
+                }
+            } else if (e.detail.slideNumber === 2) {
+                if (item3.querySelector('.mui-loading')) {
+
+                }
+            }
+        });
+        var sliderSegmentedControl = document.getElementById('sliderSegmentedControl');
+        $('.mui-input-group').on('change', 'input', function () {
+            if (this.checked) {
+                sliderSegmentedControl.className = 'mui-slider-indicator mui-segmented-control mui-segmented-control-inverted mui-segmented-control-' + this.value;
+                //force repaint
+                sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
+            }
+        });
+    })(mui);
+
+
+</script>
+</body>
+</html>

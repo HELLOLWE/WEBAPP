@@ -1,0 +1,212 @@
+/*颜色START*/
+.bg-color-while {
+    background-color: white;
+}
+.bg-color-lightgrey{
+    background-color: lightgrey;
+}
+.bg-color-lightgrey-much{
+    background-color: #f4f4f4;
+}
+.bg-color-nomore{
+    background-color: #efeff4;
+}
+.bg-color-orange{
+    background-color: orange;
+}
+
+.bg-color-red{
+    background-color: red;
+}
+
+.color-while {
+    color: white;
+}
+
+.color-red {
+    color: red;
+}
+
+.color-orange {
+    color: orange;
+}
+.color-gray{
+    color: #B5B5B5;
+}
+.color-black{
+    color: black;
+}
+.color-blue{
+    color: blue;
+}
+/*颜色END*/
+
+/*textAlig START*/
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+/*textAlig END*/
+
+/*line-heightSTART*/
+.lh-22{
+    line-height: 22px;
+}
+.lh-20{
+    line-height: 20px;
+}
+/*line-heightEND*/
+
+/**浮动 START**/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/**浮动 END**/
+
+/*广告 START*/
+.ad-h {
+    height: 200px;
+}
+
+/*广告 END*/
+
+/*表格*/
+.border-solid {
+    border: solid;
+    text-align: center;
+}
+
+
+/*margin START*/
+.m-all5{
+    margin: 5px;
+}
+.m-all0{
+    margin: 0px;
+}
+.m-t5 {
+    margin-top: 5px;
+}
+.m-t10{
+    margin-top: 10px;
+}
+.m-t20{
+    margin-top: 20px;
+}
+.m-l5 {
+    margin-left: 5px;
+}
+
+.m-r5 {
+    margin-right: 5px;
+}
+
+.m-r20 {
+    margin-right: 20px;
+}
+.m-b5{
+    margin-bottom: 5px;
+}
+.m-b20{
+    margin-bottom: 20px;
+}
+
+.m-b80 {
+    margin-bottom: 80px;
+}
+/*margin END*/
+
+/*字体START*/
+.font-middle {
+    /*font-size: 14px;*/
+    color: black;
+}
+.font-size-8{
+    font-size: 8px;
+}
+.font-size-12{
+    font-size: 12px;
+}
+/*字体END*/
+
+/*适合mui 在btn基础上修改的验证码样式*/
+.recode {
+    vertical-align: middle;
+    border: 0;
+}
+
+
+/*控制是否显示 START*/
+.show{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+/*控制是否显示 END*/
+
+/*修改MUI bar样式*/
+.mui-bar {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    height: 44px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-bottom: 0;
+    background-color: #1979CA;
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,.85);
+    box-shadow: 0 0 1px rgba(0,0,0,.85);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.mui-bar-tab .mui-tab-item.mui-active {
+    color: #1979CA;
+}
+
+.mui-title {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 44px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    margin: 0 -10px;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+}
+
+.mui-bar-tab .mui-tab-item {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #555555;
+}
+
+.mui-icon-back:before, .mui-icon-left-nav:before {
+    content: '\e471';
+    color: white;
+}
+
+
+
+
+
